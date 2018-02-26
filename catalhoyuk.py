@@ -81,6 +81,7 @@ driver.set_window_size(browserwidth, browserheight)
 
 screenshot = driver.get_screenshot_as_png()
 image = Image.open(io.BytesIO(screenshot))
+# TODO because of this, the lat / lng is no longer the correct center
 image = image.crop((0, 0, args['--width'], args['--height']))
 image.save(args['--output'])
 
