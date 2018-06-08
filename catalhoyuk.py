@@ -61,7 +61,7 @@ output = template.render(api_key=args['<Google_API_key>'],
                          zoom=args['--zoom'],
                          style=style)
 
-tmp = tempfile.NamedTemporaryFile(delete=False)
+tmp = tempfile.NamedTemporaryFile(delete=False, suffix='.html')
 
 tmp.write(output.encode('utf-8'))
 tmp.flush()
