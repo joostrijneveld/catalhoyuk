@@ -10,14 +10,20 @@ Selenium and all other Python dependencies can be easily installed by calling `p
 
 ### Usage
 ```
-  catalhoyuk.py <Google_API_key> <latitude> <longitude> [--zoom=<level>] [--theme=<filename>] [--width=<width>] [--height=<height>] [--output=<output>]
+Usage:
+    catalhoyuk.py <Google_API_key> <latitude> <longitude>
+        [--zoom=<level>] [--theme=<filename>] [--output=<filename>]
+        [--width=<width>] [--height=<height>]
+        [--tilewidth=<tilewidth>] [--tileheight=<tileheight>]
 
 Options:
-  -h --help            Show this screen.
-  --version            Show version.
-  --zoom=<level>       Zoom level [default: 10]
-  --width=<width>      Resulting image width in px [default: 500]
-  --height=<height>    Resulting image height px [default: 500]
-  --theme=<filename>   The theme file [default: themes/only-roads-blue.json]
-  --output=<filename>  The output file [default: output.png]
+    -h --help                  Show this screen.
+    --version                  Show version.
+    --zoom=<level>             Zoom level [default: 10]
+    --width=<width>            Resulting image width in px [default: 500]
+    --height=<height>          Resulting image height px [default: 500]
+    --tilewidth=<tilewidth>    Resulting image tilewidth in px [default: 500]
+    --tileheight=<tileheight>  Resulting image tileheight in px [default: 500]
+    --theme=<filename>         The theme file [default: themes/only-roads-blue.json]
+    --output=<filename>        The output file [default: output.png]
 ```
