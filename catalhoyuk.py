@@ -10,11 +10,11 @@ Options:
     -h --help                  Show this screen.
     --version                  Show version.
     --zoom=<level>             Zoom level [default: 13]
-    --width=<width>            Resulting image width in px [default: 500]
+    --width=<width>            Resulting image width in px [default: 750]
     --height=<height>          Resulting image height px [default: 500]
-    --tilewidth=<tilewidth>    Resulting image tilewidth in px [default: 500]
+    --tilewidth=<tilewidth>    Resulting image tilewidth in px [default: 750]
     --tileheight=<tileheight>  Resulting image tileheight in px [default: 500]
-    --theme=<filename>         The theme file [default: themes/only-roads-blue.json]
+    --theme=<filename>         The theme file [default: themes/only-roads-grayscale.json]
     --output=<filename>        The output file [default: output.png]
 """
 
