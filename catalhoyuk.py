@@ -112,9 +112,11 @@ output_img = Image.new('RGB', (fullwidth, fullheight))
 # to listen to Javascript events, but that's more difficult..
 PANSLEEP = 5
 
+print(f"Panning to a total of {(2*extra_halfwidth_tiles + 1) * (2*extra_halfheight_tiles + 1)} tiles")
+
 # pan to top-left tile
 driver.execute_script(f'map.panBy({-extra_halfwidth_tiles * twidth},{-extra_halfheight_tiles * theight})')
-print(f"Panning by {-extra_halfwidth_tiles * twidth} {-extra_halfheight_tiles * theight}")
+print(f"Panning by ({-extra_halfwidth_tiles * twidth}, {-extra_halfheight_tiles * theight}) px..")
 sleep(PANSLEEP)
 
 # plus one for the middle tile
@@ -122,14 +124,14 @@ for x in range(2*extra_halfwidth_tiles + 1):
     if x > 0:  # if this is not the first column
         # pan to the top of the next column
         driver.execute_script(f'map.panBy({twidth},{-(fullheight - theight)})')
-        print(f'next col: map.panBy({twidth},{-(fullheight - theight)})')
+        print(f'Next column: map.panBy({twidth}, {-(fullheight - theight)})')
         sleep(PANSLEEP)
 
     for y in range(2*extra_halfheight_tiles + 1):
         if y > 0:  # if this is not the first row
             # pan to the next row
             driver.execute_script(f'map.panBy(0,{theight})')
-            print(f'next row: map.panBy(0,{theight})')
+            print(f'Next row: map.panBy(0, {theight})')
             sleep(PANSLEEP)
 
         screenshot = driver.get_screenshot_as_png()
@@ -147,6 +149,8 @@ vpad = (fullheight - args['--height']) // 2
 
 output_img = output_img.crop((hpad, vpad, args['--width'] + hpad, args['--height'] + vpad))
 output_img.save(args['--output'])
+
+print(f"Wrote output image to {args['--output']}")
 
 driver.quit()
 os.remove(tmp.name)
