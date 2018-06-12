@@ -9,7 +9,7 @@ Usage:
 Options:
     -h --help                  Show this screen.
     --version                  Show version.
-    --zoom=<level>             Zoom level [default: 10]
+    --zoom=<level>             Zoom level [default: 13]
     --width=<width>            Resulting image width in px [default: 500]
     --height=<height>          Resulting image height px [default: 500]
     --tilewidth=<tilewidth>    Resulting image tilewidth in px [default: 500]
