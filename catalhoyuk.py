@@ -81,6 +81,7 @@ tmp_path = 'file://' + tmp.name
 
 chrome_options = Options()
 chrome_options.add_argument("--disable-infobars")  # prevent offsets
+chrome_options.add_argument("--headless")
 
 driver = webdriver.Chrome(DRIVER, chrome_options=chrome_options)
 driver.get(tmp_path)
