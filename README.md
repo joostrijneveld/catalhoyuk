@@ -1,5 +1,7 @@
 ## Çatalhöyük
 
+![Example map of the city of Nijmegen](doc/nijmegen.png)
+
 This tool generates an image of a specific part of Google Maps using a custom theme. Themes are defined using the standard [Google API style format](https://developers.google.com/maps/documentation/javascript/style-reference). This can be done textually, but also visually using tools like [Snazzy Maps](https://snazzymaps.com/editor) and [MapStylr](http://www.mapstylr.com).
 
 ### Installation
