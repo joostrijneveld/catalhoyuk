@@ -8,7 +8,20 @@ This project crucially depends on `selenium`. For Selenium to interface with you
 
 Selenium and all other Python dependencies can be easily installed by calling `pip install -r requirements.txt`.
 
-### Usage
+### Usage and troubleshooting
+
+`catalhoyuk.py` is a command-line utility, running completely headless. In its most easy form, all it requires you to specify is a Google API key and a pair of coordinates. The latter can be easily extracted from a Google Maps URL.
+
+Depending on your use-case, you may want to specify larger dimensions. This should typically also be paired with larger tile dimensions, to long waiting times as catalhoyuk pans across the map.
+
+Furthermore, you may want to specify and/or modify custom themes. Several basic themes have been included in the `themes` directory.
+
+#### Unrendered areas
+
+If you're experiencing unrendered areas in your output image, your coordinates may be too close to the edge of an area border in Google Maps. In that case, reduce the tile dimensions so that panning actually crosses a Google Maps area border and all areas are rendered. Alternatively, depending on your specific case, it may be more efficient to increase image dimensions (and manually crop afterwards) rather than reducing tile dimensions.
+
+#### Command-line interface
+
 ```
 Usage:
     catalhoyuk.py <Google_API_key> <latitude> <longitude>
